@@ -1,0 +1,14 @@
+Host bbodek-dev-bastion
+	HostName ts-bastion-dev.thebbodek.com
+	User ubuntu
+	IdentityFile ~/.bbodek/keys/dev-bbodek-bastion-key.pem
+
+Host bbodek-prod-bastion
+	HostName ts-bastion-prod.thebbodek.com
+	User ubuntu
+	IdentityFile ~/.bbodek/keys/prd-bbodek-bastion-key.pem
+
+Host bbodek-dev-be
+	HostName 10.0.20.29
+	User ubuntu
+	IdentityFile ~/.bbodek/keys/dev-bbodek-private-BE-ec2-key.pem
