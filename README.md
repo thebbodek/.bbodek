@@ -7,15 +7,13 @@ A dotfile directory for storing sensitive keys and credentials with an all-in-on
 
 ## Installation
 ```bash
-# Clone
-cd ~
-git clone https://github.com/thebbodek/.bbodek.git
+git clone https://github.com/thebbodek/.bbodek.git ~/.bbodek
 
-# Infisical CLI
+# Setup Infisical CLI
 brew install infisical/get-cli/infisical
 infisical login
 
-# Installation
+# Initialize
 chmod +x ~/.bbodek/initialize.sh
 ~/.bbodek/initialize.sh
 ```
