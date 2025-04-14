@@ -15,6 +15,7 @@ else
 fi
 
 # aws
+mkdir -p ~/.aws
 cat > ~/.bbodek/aws/credentials.temp << EOF
 ### BBODEK ###
 
