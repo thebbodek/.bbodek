@@ -2,8 +2,11 @@
 A dotfile directory for storing sensitive keys and credentials with an all-in-one bash script to initialize BBODEK local backend development environment using infisical.
 
 ## Prerequisites
-- [Infisical](https://infisical.com/) for retrieving keys and credentials
-- [Tailscale](https://tailscale.com/) for SSH connection
+- [Infisical Account](https://infisical.com/) for retrieving keys and credentials
+- [Tailscale Account](https://tailscale.com/) for SSH connection
+- [Homebrew](https://brew.sh/) for installing infisical CLI
+- [gettext](https://formulae.brew.sh/formula/gettext) for using `envsubst` command
+  - `brew install gettext`, `brew link --force gettext` 
 
 ## Installation
 ```bash
