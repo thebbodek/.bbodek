@@ -14,8 +14,10 @@ brew install infisical/get-cli/infisical
 infisical login
 
 # Initialize
-chmod +x ~/.bbodek/initialize.sh
-~/.bbodek/initialize.sh
+cd .bbodek
+infisical init # Select 'No' for questions
+chmod +x initialize.sh
+./initialize.sh
 ```
 
 ## Guide
