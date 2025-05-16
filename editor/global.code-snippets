@@ -2,9 +2,7 @@
   "Bbodek useState": {
     "scope": "javascriptreact, typescriptreact, javascript, typescript",
     "prefix": "us",
-    "body": [
-      "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState$2($3);$0"
-    ],
+    "body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = useState$2($3);$0"]
   },
   "Bbodek Dynamic Import": {
     "scope": "javascriptreact, typescriptreact",
@@ -16,8 +14,8 @@
       "  () => import('./${1:Component}'),",
       "  { ssr: false },",
       ");",
-      "$0",
-    ],
+      "$0"
+    ]
   },
   "Bbodek useModal": {
     "scope": "javascriptreact, typescriptreact",
@@ -42,8 +40,8 @@
       "};",
       "",
       "export default ${TM_FILENAME_BASE};",
-      "",
-    ],
+      ""
+    ]
   },
   "Bbodek Default Hooks": {
     "scope": "javascriptreact, typescriptreact, javascript, typescript",
@@ -81,7 +79,7 @@
       "",
       "export default  ${TM_FILENAME_BASE};",
       ""
-    ],
+    ]
   },
   "Bbodek API Request": {
     "scope": "javascript, typescript",
@@ -203,7 +201,7 @@
       "  fn: () => set({ value: true }),",
       "}));",
       ""
-    ],
+    ]
   },
   "Bbodek Zustand Persist Store": {
     "scope": "javascript, typescript",
@@ -429,4 +427,41 @@
       ""
     ]
   },
+  "Bbodek Storybook": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "sb",
+    "body": [
+      "import type { Meta, StoryObj } from '@storybook/react';",
+      "",
+      "const meta: Meta<typeof ${TM_FILENAME_BASE/^(.*)\\.stories$/${1:/pascalcase}/}> = {",
+      "  title: 'core/${TM_FILENAME_BASE/^(.*)\\.stories$/${1:/pascalcase}/}',",
+      "  component: ${TM_FILENAME_BASE/^(.*)\\.stories$/${1:/pascalcase}/},",
+      "  argTypes: {",
+      "    variant: {",
+      "      control: 'select',",
+      "      options: Object.values(${TM_FILENAME_BASE/^(.*)\\.stories$/${1:/upcase}/}_VARIANTS),",
+      "      description: '${TM_FILENAME_BASE/^(.*)\\.stories$/${1:/pascalcase}/} Variant',",
+      "      table: {",
+      "        defaultValue: {",
+      "          summary: '$1',",
+      "        },",
+      "      },",
+      "    },",
+      "  },",
+      "};",
+      "",
+      "export default meta;",
+      "",
+      "type Story = StoryObj<typeof ${TM_FILENAME_BASE/^(.*)\\.stories$/${1:/pascalcase}/}>;",
+      "",
+      "export const Default: Story = {",
+      "  args: {",
+      "    variant: '$1',",
+      "  },",
+      "  // Optional",
+      "  render: (args) => <${TM_FILENAME_BASE/^(.*)\\.stories$/${1:/pascalcase}/} {...args} />,",
+      "};",
+      ""
+    ]
+  }
 }
